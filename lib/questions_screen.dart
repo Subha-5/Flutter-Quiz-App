@@ -27,22 +27,9 @@ class _QuestionsScreen extends State<QuestionsScreen> {
             style: const TextStyle(color: Colors.white),
           ),
           const SizedBox(height: 30),
-          AnswerButton(
-            answerText: currentQuestion.options[0],
-            onTap: () => {},
-          ),
-          AnswerButton(
-            answerText: currentQuestion.options[1],
-            onTap: () => {},
-          ),
-          AnswerButton(
-            answerText: currentQuestion.options[2],
-            onTap: () => {},
-          ),
-          AnswerButton(
-            answerText: currentQuestion.options[3],
-            onTap: () => {},
-          ),
+          ...currentQuestion.options.map((option) {
+            return AnswerButton(answerText: option, onTap: () {});
+          }),
         ],
       ),
     );
