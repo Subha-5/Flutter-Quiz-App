@@ -33,7 +33,7 @@ class ResultsScreen extends StatelessWidget {
         margin: const EdgeInsets.all(40),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const Text('You answered X out of Y questions correctly!'),
             const SizedBox(
